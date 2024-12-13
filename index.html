@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management (HNU)</title>
+
+  <!-- RESET CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+
+  <script defer type="module" src="./js/main.js"></script>
+
+</head>
+<body>
+  <div class="top">
+    <nav class="top-nav">
+      <button type="button" class="top-nav-modal">
+        <i class="bx bxs-grid"></i>
+      </button>
+      <a href="index.html" class="top-title">HNU</a>
+      <a href="cart.html" class="top-nav-cart">
+        <i class="bx bx-cart"></i>
+        <strong class="top-cart-count count-mobile"></strong>
+      </a>
+      <div class="top-category">
+        <ul class="category-box">
+          <li class="category-item">
+            <a href="index.html#new">검색</a>
+          </li>
+          <li class="category-item">
+            <a href="index.html#goods">베스트</a>
+          </li>
+          <li class="category-item">
+            <a href="wishlist.html">장바구니</a>
+          </li>
+          <li class="category-item">
+            <div class="top-cart">
+              <a href="login.html">로그인</a>
+              <strong class="top-cart-count count-desk"></strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+
+
+  <section class="notice">
+
+    <div class="notice-line">
+      <div class="bg-left"></div>
+      <div class="bg-right"></div>
+      <div class="inner">
+
+        <div class="inner__left">
+          <h2>급상승도서</h2>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><a href="javascript:void(0)">우리는 사랑 안에 살고 있다 · 유혜주 · 21세기북스</a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)">슬픔의 모양 · 이석원 · 김영사</a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)">트럼프 2.0 시대 · 박종훈 · 글로퍼스</a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)">일의 감각 · 조수용 · REFERENCE BY B</a></div>
+            </div>
+          </div>
+          <a href="javascript:void(0)" class="notice-line__more"><div class="material-icons">add_circle</div></a>
+        </div>
+        <div class="inner__right">
+          <h2>이벤트</h2>
+          <div class="toggle-promotion">
+            <div class="material-icons">upload</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="promotion">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/main_promo_1.png" alt="" />
+            <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_promo_2.png" alt="" />
+            <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_promo_3.png" alt="" />
+            <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_promo_4.png" alt="" />
+            <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_promo_5.png" alt="" />
+            <!-- <a href="javascript:void(0)" class="btn">자세히 보기</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-prev">
+        <div class="material-icons">arrow_back</div>
+      </div>
+      <div class="swiper-next">
+        <div class="material-icons">arrow_forward</div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" id="query" placeholder="">
+      <!-- <button onclick="searchBooks()">Search</button> -->
+    </div>
+  </div>
+
+
+  <div class="container">
+    
+    <div class="product-list">
+      <div class="results" id="results"></div>
+    </div>
+  </div>
+
+
+  <!-- <div class="products">
+    <h3>our new products</h3>
+    <div class="product-list">
+      <a href="#" class="product">
+        <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788936434120.jpg" width="225">
+        <div class="product-name">소년이 온다</div>
+        <div class="product-name">한강 · 창비 · 2014.05.19</div>
+        <div class="product-price">13,500원</div>
+      </a>
+      
+      <a href="#" class="product">
+        <img src="https://store.kyobobook.co.kr/_next/image?url=https%3A%2F%2Fcontents.kyobobook.co.kr%2Fsih%2Ffit-in%2F144x222%2Fpdt%2F9788954682152.jpg&w=144&q=80" width="225">
+        <div class="product-name">작별하지 않는다</div>
+        <div class="product-name">한강 · 문학동네 · 2021.09.09</div>
+        <div class="product-price">15,120원</div>
+      </a>
+      
+      <a href="#" class="product">
+        <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791169851053.jpg" width="225">
+        <div class="product-name">어른의 행복은 조용하다</div>
+        <div class="product-name">태수 · 페이지2북스 · 2024.11.04</div>
+        <div class="product-price">16,020원</div>
+      </a>
+      
+      <a href="#" class="product"></a>
+      
+      <a href="#" class="product">
+        <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791198987600.jpg" width="225">
+        <div class="product-name">트럼프 2.0 시대</div>
+        <div class="product-name">박종훈 · 글로퍼스 · 2024.11.08</div>
+        <div class="product-price">18,000원</div>
+      </a>
+      
+      <a href="#" class="product">
+        <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788954651134.jpg" width="225">
+        <div class="product-name">흰</div>
+        <div class="product-name">한강 · 문학동네 · 2018.04.25</div>
+        <div class="product-price">13,050원</div>
+      </a>
+      
+      <a href="#" class="product">
+        <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791171179268.jpg" width="225">
+        <div class="product-name">기어코 반짝일 너에게</div>
+        <div class="product-name">김규남 · 2024.12.11</div>
+        <div class="product-price">15,120원</div>
+      </a>
+      <div class="clearfix"></div>
+    </div>
+  </div> -->
+
+
+
+
+</body>
+</html>

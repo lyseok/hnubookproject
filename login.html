@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management (HNU)</title>
+
+  <!-- RESET CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    
+  <link rel="stylesheet" href="./css/signin.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/reset.css">
+  
+
+
+</head>
+<body>
+  <!-- Header -->
+  <div class="top">
+    <nav class="top-nav">
+      <button type="button" class="top-nav-modal">
+        <i class="bx bxs-grid"></i>
+      </button>
+      <a href="index.html" class="top-title">HNU</a>
+      <a href="cart.html" class="top-nav-cart">
+        <i class="bx bx-cart"></i>
+        <strong class="top-cart-count count-mobile"></strong>
+      </a>
+      <div class="top-category">
+        <ul class="category-box">
+          <li class="category-item">
+            <a href="index.html#new">검색</a>
+          </li>
+          <li class="category-item">
+            <a href="index.html#goods">베스트</a>
+          </li>
+          <li class="category-item">
+            <a href="wishlist.html">장바구니</a>
+          </li>
+          <li class="category-item">
+            <div class="top-cart">
+              <a href="login.html">로그인</a>
+              <strong class="top-cart-count count-desk"></strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+    
+
+  <section class="signin">
+
+    <h1>로그인</h1>
+    <div class="signin__card">
+      <h2>
+        <strong>Welcome!</strong>
+      </h2>
+      <form action="./index.html" method="">
+        <input type="text" placeholder="아이디를 입력하세요." />
+        <input type="password" placeholder="비밀번호를 입력하세요." />
+        <input type="submit" value="로그인" />
+        <p>
+          * 비밀번호를 타사이트와 같이 사용할 경우 도용의 위험이 있으니,<br />
+          정기적으로 비밀번호를 변경하세요! 
+        </p>
+      </form>
+      <div class="actions">
+        <a href="javascript:void(0)">회원가입</a>
+        <a href="javascript:void(0)">아이디 찾기</a>
+        <a href="javascript:void(0)">비밀번호 찾기</a>
+      </div>
+    </div>
+
+  </section>
+  
+  <!-- footer -->
+  <footer data-include-path="./footer.html"></footer>
+
+</body>
+</html>
