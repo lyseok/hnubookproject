@@ -6,13 +6,32 @@
   <title>Book Detail</title>
 
   <link rel="stylesheet" href="./css/bookinfo.css">
+  <link rel="stylesheet" href="./css/header.css">
 
   <script defer src="./js/bookinfo.js"></script>
 
 </head>
 <body>
+    <!-- Header -->
+    <header>
+      <div class="navWrapper" id="home">
+        <div class="clearfix">
+          <a href="./index.html"><h2 class="companyName">HNU</h2></a>
+          <nav class="mainNav clearfix">
+            <ul>
+              <li><a href="./search.html">검색</a></li>
+              <li><a href="#work" class="smoothScroll">베스트</a></li>
+              <li><a href="#about" class="smoothScroll">장바구니</a></li>
+              <li><a href="./login.html" class="smoothScroll">로그인</a></li>
+            </ul>
+          </nav>
+        </div><!-- end .innerWrapper -->
+      </div><!-- end of .navWrapper -->
+  
+    </header>
+
   <div class="container">
-    <h1>Book Detail</h1>
+    
     <div class="book-details" id="book-details">
       <!-- Book details will be filled here -->
     </div>

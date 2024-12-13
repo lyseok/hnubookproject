@@ -14,46 +14,30 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     
   <link rel="stylesheet" href="./css/signin.css">
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/header.css">
+
   
 
 
 </head>
 <body>
   <!-- Header -->
-  <div class="top">
-    <nav class="top-nav">
-      <button type="button" class="top-nav-modal">
-        <i class="bx bxs-grid"></i>
-      </button>
-      <a href="index.html" class="top-title">HNU</a>
-      <a href="cart.html" class="top-nav-cart">
-        <i class="bx bx-cart"></i>
-        <strong class="top-cart-count count-mobile"></strong>
-      </a>
-      <div class="top-category">
-        <ul class="category-box">
-          <li class="category-item">
-            <a href="index.html#new">검색</a>
-          </li>
-          <li class="category-item">
-            <a href="index.html#goods">베스트</a>
-          </li>
-          <li class="category-item">
-            <a href="wishlist.html">장바구니</a>
-          </li>
-          <li class="category-item">
-            <div class="top-cart">
-              <a href="login.html">로그인</a>
-              <strong class="top-cart-count count-desk"></strong>
-            </div>
-          </li>
-        </ul>
+  <header>
+    <div class="navWrapper" id="home">
+      <div class="clearfix">
+        <a href="./index.html"><h2 class="companyName">HNU</h2></a>
+        <nav class="mainNav clearfix">
+          <ul>
+            <li><a href="./search.html">검색</a></li>
+            <li><a href="#work" class="smoothScroll">베스트</a></li>
+            <li><a href="#about" class="smoothScroll">장바구니</a></li>
+            <li><a href="./login.html" class="smoothScroll">로그인</a></li>
+          </ul>
+        </nav>
       </div>
-    </nav>
-  </div>
-    
+    </div>
+
+  </header>
 
   <section class="signin">
 
@@ -79,9 +63,8 @@
     </div>
 
   </section>
-  
-  <!-- footer -->
-  <footer data-include-path="./footer.html"></footer>
+
+
 
 </body>
 </html>
