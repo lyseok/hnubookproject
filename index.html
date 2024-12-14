@@ -8,8 +8,9 @@
   <!-- RESET CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
 
-  <link rel="stylesheet" href="./css/style.css" />
+  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/header.css">
 
 
   <!-- GOOGLE FONTS -->
@@ -34,9 +35,10 @@
 
   <script defer type="module" src="./js/main.js"></script>
 
+
 </head>
 <body>
-  <div class="top">
+  <!-- <div class="top">
     <nav class="top-nav">
       <button type="button" class="top-nav-modal">
         <i class="bx bxs-grid"></i>
@@ -58,15 +60,35 @@
             <a href="wishlist.html">장바구니</a>
           </li>
           <li class="category-item">
+            <a href="mypage.html">마이페이지</a>
+          </li>
+          <li class="category-item">
             <div class="top-cart">
-              <a href="./login.html">로그인</a>
+              <a href="./login.html" id="login-btn">로그인</a>
               <strong class="top-cart-count count-desk"></strong>
             </div>
           </li>
         </ul>
       </div>
     </nav>
-  </div>
+  </div> -->
+  <header>
+    <div class="navWrapper" id="home">
+      <div class="clearfix">
+        <a href="./index.html"><h2 class="companyName">HNU</h2></a>
+        <nav class="mainNav clearfix">
+          <ul>
+            <li><a href="./search.html">검색</a></li>
+            <li><a href="#work" class="smoothScroll">베스트</a></li>
+            <li><a href="./wishlist.html" class="smoothScroll">장바구니</a></li>
+            <li><a href="./mypage.html" class="smoothScroll">마이페이지</a></li>
+            <li><a href="./login.html" class="smoothScroll" id="login-btn">로그인</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
 
 
   

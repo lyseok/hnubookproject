@@ -16,12 +16,11 @@
   <link rel="stylesheet" href="./css/signin.css">
   <link rel="stylesheet" href="./css/header.css">
 
-  
+  <script defer src="./js/login.js"></script>
 
 
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="navWrapper" id="home">
       <div class="clearfix">
@@ -30,8 +29,9 @@
           <ul>
             <li><a href="./search.html">검색</a></li>
             <li><a href="#work" class="smoothScroll">베스트</a></li>
-            <li><a href="#about" class="smoothScroll">장바구니</a></li>
-            <li><a href="./login.html" class="smoothScroll">로그인</a></li>
+            <li><a href="./wishlist.html" class="smoothScroll">장바구니</a></li>
+            <li><a href="./mypage.html" class="smoothScroll">마이페이지</a></li>
+            <li><a href="./login.html" class="smoothScroll" id="login-btn">로그인</a></li>
           </ul>
         </nav>
       </div>
@@ -39,7 +39,7 @@
 
   </header>
 
-  <section class="signin">
+  <!-- <section class="signin">
 
     <h1>로그인</h1>
     <div class="signin__card">
@@ -62,9 +62,29 @@
       </div>
     </div>
 
-  </section>
+  </section> -->
 
-
+  <div class="form-structor">
+    <div class="signup">
+      <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+      <div class="form-holder">
+        <input type="text" class="input" placeholder="Name" />
+        <input type="email" class="input" placeholder="Email" />
+        <input type="password" class="input" placeholder="Password" />
+      </div>
+      <button class="submit-btn">Sign up</button>
+    </div>
+    <div class="login slide-up">
+      <div class="center">
+        <h2 class="form-title" id="login"><span>or</span>Log in</h2>
+        <div class="form-holder">
+          <input type="email" class="input" placeholder="Email" />
+          <input type="password" class="input" placeholder="Password" />
+        </div>
+        <button class="submit-btn">Log in</button>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

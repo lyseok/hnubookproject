@@ -20,6 +20,7 @@ html {
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
+  margin-top: 66px;
 }
 
 /* NOTICE */
@@ -250,10 +251,6 @@ html {
 .product-price{
   margin-bottom: 15px;
   font-size: 16px;
-}
-
-.clearfix{
-  clear: both;
 }
 
 .footer{
