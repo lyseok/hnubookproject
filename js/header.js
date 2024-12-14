@@ -1,3 +1,37 @@
+// document.addEventListener("DOMContentLoaded", () => {
+//   const header = document.querySelector('header[data-include-path]');
+//   const path = header.getAttribute('data-include-path');
+
+//   if (path) {
+//       fetch(path)
+//           .then(response => response.text())
+//           .then(data => {
+//               header.innerHTML = data; // 외부 파일 내용을 삽입
+
+//               // 로그인 상태 확인 및 헤더 업데이트
+//               const loginBtn = document.getElementById('login-btn');
+//               const username = localStorage.getItem('username'); // 로컬 저장소에서 사용자 이름 확인
+
+//               if (username) {
+//                   loginBtn.textContent = '로그아웃';
+//                   loginBtn.addEventListener('click', () => {
+//                       // 로그아웃 로직
+//                       localStorage.removeItem('username'); // 사용자 이름 삭제
+//                       alert('로그아웃되었습니다.');
+//                       window.location.reload(); // 페이지 새로고침
+//                   });
+//               } else {
+//                   loginBtn.textContent = '로그인';
+//                   loginBtn.addEventListener('click', () => {
+//                       window.location.href = './login.html'; // 로그인 페이지로 이동
+//                   });
+//               }
+//           })
+//           .catch(err => console.error('Error loading header:', err));
+//   }
+// });
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector('header[data-include-path]');
   const path = header.getAttribute('data-include-path');
@@ -7,47 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
           .then(response => response.text())
           .then(data => {
               header.innerHTML = data; // 외부 파일 내용을 삽입
+
+              // 로그인 상태 확인 및 헤더 업데이트
+              const loginBtn = document.getElementById('login-btn');
+              const username = localStorage.getItem('username'); // 로컬 저장소에서 사용자 이름 확인
+
+              if (username) {
+                  loginBtn.textContent = '로그아웃';
+                  loginBtn.addEventListener('click', () => {
+                      // 로그아웃 로직
+                      localStorage.removeItem('username'); // 사용자 이름 삭제
+                      alert(`${username}님, 로그아웃되었습니다.`); // 사용자 이름 포함 메시지
+                      window.location.reload(); // 페이지 새로고침
+                  });
+              } else {
+                  loginBtn.textContent = '로그인';
+                  loginBtn.addEventListener('click', () => {
+                      window.location.href = './login.html'; // 로그인 페이지로 이동
+                  });
+              }
           })
           .catch(err => console.error('Error loading header:', err));
   }
 });
-
-
-$('#header').prepend('<div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>');
-	
-$("#menu-icon").on("click", function(){
-  $("nav").slideToggle();
-  $(this).toggleClass("active");
-});
-
-
-
-(function() {
-
-  'use strict';
-  
-  var $searchView = $('.menu-search-container');
-  var $menu = $('.menu-mac, .menu-iPad, .menu-iPhone, .menu-watch, .menu-tv, .menu-support, .menu-search, .menu-store');
-  var $fadeScreen = $('.fade-screen');
-  
-  $('li.menu-search a, .fade-screen, .menu-search-close').on('click', function(e) {
-    
-    $searchView.toggleClass('active');
-    
-    setTimeout(function(){
-      $searchView.children().find('input').focus();
-    }, 1100);
-    
-    $fadeScreen.toggleClass('visible');
-    $menu.removeClass('is-closed');
-    $menu.toggleClass('hidden');
-    
-    e.preventDefault();
-  });
-  
-  $('.fade-screen,.menu-search-close').on('click', function(e) {
-    $menu.toggleClass('is-closed');
-    e.preventDefault();
-  });
-    
-}())
